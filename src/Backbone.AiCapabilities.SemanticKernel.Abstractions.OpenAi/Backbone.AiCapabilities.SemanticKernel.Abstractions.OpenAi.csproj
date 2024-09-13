@@ -10,7 +10,7 @@
         <Description>Abstractions for Semantic Kernel and OpenAI integration</Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageTags>openai, semantic-kernel, ai-capabilities</PackageTags>
-        <Version>8.0.0-alpha.1</Version>
+        <Version>8.0.0-alpha.2</Version>
         <Authors>WoW 2.0 Team</Authors>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/WoW-2-0-Backbone/Backbone.AiCapabilities.SemanticKernel</PackageProjectUrl>
@@ -26,7 +26,7 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
-        <PackageReference Include="Microsoft.SemanticKernel" Version="1.5.0"/>
+        <PackageReference Include="Microsoft.SemanticKernel" Version="1.19.0" />
     </ItemGroup>
 
 </Project>
