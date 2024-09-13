@@ -25,14 +25,12 @@ public static class InfraConfigurations
     {
         services.Configure<SemanticKernelOpenAiSettings>(configuration.GetSection(nameof(SemanticKernelOpenAiSettings)));
 
+        var kernelBuilder = Kernel.CreateBuilder();
+        configureKernel?.Invoke(kernelBuilder, services, configuration);
+        var kernel = kernelBuilder.Build();
+        
         // Add Semantic Kernel
-        services.AddSingleton(_ =>
-        {
-            var kernelBuilder = Kernel.CreateBuilder();
-            configureKernel?.Invoke(kernelBuilder, services, configuration);
-
-            return kernelBuilder.Build();
-        });
+        services.AddSingleton(kernel);
 
         return services;
     }
